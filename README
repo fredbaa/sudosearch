@@ -1,0 +1,24 @@
+A search tool inspired by http://duckduckgo.com
+
+One query multiple results from different categories:
+* General Searches
+* Codes
+* Torrents
+* Subtitles
+* Music Downloads
+* Videos
+* News
+* Images
+* Domain
+* Apps
+* Games
+* People
+* Food
+
+How to start:
+1. bundle install (install also gem dependencies)
+2. bundle exec rake db:create
+   bundle exec rake db:migrate
+3. bundle exec rake builtin_data:setup_sites
+4. Create a config/appctl.yml based on config/appctl.yml.sample
+5. run app by script/appctl

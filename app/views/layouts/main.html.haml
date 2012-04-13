@@ -1,0 +1,30 @@
+%html
+  %head
+    %title Search Me
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <link href='http://fonts.googleapis.com/css?family=Molengo&subset=latin' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cardo&subset=latin' rel='stylesheet' type='text/css'>
+    <link rel="SHORTCUT ICON" href="/favicon.ico">
+    = stylesheet_link_tag 'main', 'coda-slider-2.0'
+    = javascript_include_tag 'jquery-1.4.4','jquery.easing.1.3', 'jquery.coda-slider-2.0'
+    = javascript_include_tag :defaults
+    
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-20049815-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  %body
+    = yield
+
+#footnote
+  This search tool is made by
+  = link_to "Fred Baa", "http://drixenol.com", :target => "_blank"
+  , and one of the awesome projects by 
+  = link_to "SudoCrew", "http://sudocrew.com", :target => "_blank"

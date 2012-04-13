@@ -1,0 +1,95 @@
+body {
+	font-family: arial, serif;
+}
+
+table {
+	width: 570px;
+}
+
+ul {
+	list-style: none;
+	font-family: arial, serif;
+	padding-left: 0px;
+}
+
+#main_frame {
+  text-align: center;
+}
+
+#logo_area {
+  padding-bottom: 5px;
+	padding-left: 200px;
+}
+
+#form_area select {
+  width: 300px;
+	font-size: 15px;
+}
+
+#search_query {
+	font-family: 'Molengo', arial, serif;
+	font-size: 30px;
+	color: #D3D3D3;
+	padding-top: 5px;
+}
+
+#search_button {
+	height: 70px;
+}
+
+.categ_name, #checkbox_options_area {
+	font-family: 'Cardo', arial, serif;
+}
+
+#checkbox_options_area {
+	margin-left: -80px;
+}
+
+.category_result {
+	color: #005500;
+}
+
+#results_frame {
+	width: 500px;
+}
+
+#super_main{
+	width: 800px;
+	margin: auto;
+}
+
+#search_results_area{
+	height: 217px;
+	width: 800px;
+	overflow-y: auto;
+}
+
+#query_label{
+	font-family: 'Cardo', arial, serif;
+	font-size: 20px;
+	color: #660000;
+}
+
+#footnote{
+	margin: auto auto auto -50px;
+	padding-top: 70px;
+	font-size: 10px;
+	clear: both;
+	text-align: center;
+}
+
+#error_page_msg{
+	text-align: center;
+	margin-left: -50px;
+	padding-top: 30px;
+}
+
+#error_msg_head{
+	font-family: arial, serif;
+	font-size: 30px;
+	color: #660000;
+}
+
+#logo_link{
+	color: white;
+}

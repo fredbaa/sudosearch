@@ -1,0 +1,43 @@
+#super_main
+  
+  #logo_area
+    = link_to image_tag("logo-text-bg.png", :title => "Home"), '#1', :rel => "coda-slider-1", :class => "xtrig", :id => "logo_link"
+    = link_to "results", "#2", :rel => "coda-slider-1", :class => "xtrig", :style => "display:none", :id => "results_link"
+  
+  .coda-slider-wrapper
+    #coda-slider-1{:class => "coda-slider"}
+      .panel
+        .panel_wrapper
+          #main_frame
+            %br
+            #form_area
+              - remote_form_for 'search_form', :url => search_search_path, :method => :post, :html => {:id => "search_form", :onsubmit => "showLoader();"} do
+                %center
+                  %table
+                    %tr
+                      %td{:width => '100px'}
+                        = text_field_tag "q", nil, :size => 30, :id => "search_query"
+                      %td{:height => "75px"}
+                        = image_tag "loader.gif", :id => "search_loader", :style => "display:none;"
+                        = image_submit_tag "find.png", :id => "search_button"
+                  %br
+                  = hidden_field_tag "category"
+              %center
+                %table
+                  %tr
+                    - @site_categories.each_with_index do |cat,idx|
+                      %td{:class => "catbox"}
+                        =check_box_tag "categs", cat.code, false, :class => "category_box"
+                        %span.categ_name=cat.name
+                      - if (idx+1) % 3 == 0
+                        %tr
+                
+                #checkbox_options_area
+                  %br
+                  = link_to "all", "javascript:void(0);", :id => "check_all_option"
+                  |
+                  = link_to "clear", "javascript:void(0);", :id => "clear_all_option"
+      .panel
+        .panel_wrapper
+          =link_to "go back", "#1", :rel => "coda-slider-1", :class => "xtrig", :style => "float:right", :id => "results_link"
+          #results_frame

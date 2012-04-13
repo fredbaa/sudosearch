@@ -1,0 +1,19 @@
+- querized = query.gsub(" ", "+")
+
+- if query == "Search for..." || query.blank? || site_categs.size == 0
+  %b Dude, you gotta fill those missing fields! :)
+- else
+  %b Search Results for
+  %label#query_label
+    %i= query
+
+
+  #search_results_area
+    - site_categs.each do |cat|
+      %ul
+        %li{:class => "category_result", :colspan => 2,:width => "600px"}
+          %b= cat.name
+        %br
+        - sites[cat.id].each do |site|
+          %li
+            =link_to site.name, site.url + querized, :target => "_blank"
